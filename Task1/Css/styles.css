@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 0px;
+}
+
+body{
+    padding: 50px;
+    text-align: center;
+}
+div.userInfo{
+    margin-bottom: 10px;
+    border: solid 1px black;
+}
