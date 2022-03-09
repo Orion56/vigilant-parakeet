@@ -13,3 +13,15 @@ div.userInfo{
     margin-bottom: 10px;
     border: solid 1px black;
 }
+#sec1{
+    margin: 20px 0px;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    border: solid 2px black;
+    width: 24%;
+    margin-bottom: 15px;
+}

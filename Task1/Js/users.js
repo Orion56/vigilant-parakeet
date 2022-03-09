@@ -240,7 +240,7 @@ users = [
 
 const body = document.querySelector("body");
 
-const ElCreator = (parent, elementType, txt, classes, attributes=[])=>{
+const elCreator = (parent, elementType, txt, classes, attributes=[])=>{
     const element = document.createElement(elementType);
     parent.appendChild(element);
     if (txt) element.innerText = txt;
@@ -251,12 +251,12 @@ const ElCreator = (parent, elementType, txt, classes, attributes=[])=>{
     return element;
 }
 
-const wrapper = ElCreator(body, "div", null, "container");
+const wrapper = elCreator(body, "div", null, "container");
 users.forEach(user => {
-    const userInfo = ElCreator(wrapper, "div",null, 'userInfo'),
-        name = ElCreator(userInfo, "h2", user.name),
-        userName = ElCreator(userInfo, "h3", user.username),
-        address = ElCreator(userInfo, "p", user.address.street);
+    const userInfo = elCreator(wrapper, "div",null, 'userInfo'),
+        name = elCreator(userInfo, "h2", user.name),
+        userName = elCreator(userInfo, "h3", user.username),
+        address = elCreator(userInfo, "p", user.address.street);
 })
 
 /*

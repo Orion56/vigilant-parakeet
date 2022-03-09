@@ -71,15 +71,17 @@ const photos = [
     }
 ]
 
-const sec1 = ElCreator(body,"section", null,null,[{attrName: 'id', AttrVal: 'sec1'}])
+let atrributes = [{ attrName: 'id', attrVal: 'sec1' }];
+const sec1 = elCreator(body,"section", null,null,atrributes)
 photos.forEach(photo => {
-    const fig = ElCreator(sec1, 'div'),
-        albumId = ElCreator(fig, 'h6', photo.albumId),
-        photoId = ElCreator(fig, 'h5', photo.id),
-        title = ElCreator(fig, 'h2', photo.title);
-    
-    let attributes = [{ AttrName: 'src', AttrVal: photo.url }];
-    const pic = ElCreator(fig, "img", null, null, attributes);
+    const fig = elCreator(sec1, 'div', null, 'card');
+    elCreator(fig, 'h3', photo.title),
+    elCreator(fig, 'h4', photo.albumId),
+    elCreator(fig, 'h5', photo.id);
+
+    let attributes = [{ attrName: 'src', attrVal: photo.thumbnailUrl }];
+    const pic = elCreator(fig, "img", null, null, attributes);
+
 })
 
 
