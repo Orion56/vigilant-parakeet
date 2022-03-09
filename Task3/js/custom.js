@@ -1,4 +1,3 @@
-/*
 
 //read & check old data > local storage
 //receive customer object data > form controls
@@ -7,7 +6,6 @@
 
 //create table cells for single user
 //read & show data > Data table cells
-//
 
 const readDataFromStorage= (storageKey)=>{
     let data =[]
@@ -67,8 +65,14 @@ function showUser(){
     
     if (customerData) customerData.addEventListener("submit", Fsubmitter)
     if(userTable) showUser()
-*/
 
+
+
+
+
+
+
+/*
 function Cal(x, y) {
     return {
         add() { console.log(x + y) },
@@ -76,6 +80,7 @@ function Cal(x, y) {
         div() { console.log(x / y) }
     }
 }
+*/
 
 // const Calc = Cal(5,1);
 // Calc.add()
@@ -86,12 +91,3 @@ function Cal(x, y) {
 // console.log(1)
 // setTimeout(() => { console.log(2) }, 2000)
 // console.log(3)
-
-
-function getApi(apiLink, callback) {
-    fetch(apiLink)
-      .then((response) => response.json())
-        .then((json) => console.log(json))   
-}
-
-getApi(https://jsonplaceholder.typicode.com/photos?_limit=10)
