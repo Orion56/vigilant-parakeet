@@ -55,7 +55,7 @@ myKelvinConv(74)
 myCelsiusConv(74)
  */
 
-
+//generate a list of Restaurants & check available seats for a party
 const checkAvailability = function (partySize) {
     let seatsLeft = this.guestCapacity - this.guestCount
     if (partySize <= seatsLeft) {
@@ -65,7 +65,6 @@ const checkAvailability = function (partySize) {
         console.log(chalk.bgRed.bold('no available seats'))
     }
 }
-
 restaurant={}
 restaurantList =[]
 i = 0;
@@ -79,7 +78,6 @@ while (i < 10) {
     restaurantList.push(restaurant);
     i++
 }
-
 restaurantList.forEach(element => {
     console.log(element.name)
     element.checkAvailability(110) 
