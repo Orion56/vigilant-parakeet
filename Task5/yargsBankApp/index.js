@@ -20,10 +20,12 @@ yargs.command({
             userName: argv.name,
             accountNo: Math.floor(Math.random()*10e16),
             iniBalance: argv.initial_balance,
-            remBalance: argv.initial_balance
+            remBalance: argv.initial_balance,
+            operations: []
         }
         user.addUser(userData)
-        console.log(userData)
+        user.showUser(userData)
+        //console.log(userData)
     }
 })
 

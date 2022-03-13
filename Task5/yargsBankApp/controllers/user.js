@@ -1,6 +1,9 @@
 const validator = require('validator');
 const chalk = require('chalk')
 const dealWithJson = require('./dealWithJson')
+const findUserIndex = () => {
+    let i =users.findIndex()
+}
 
 const addUser = (userData) =>{
     try{
@@ -15,4 +18,8 @@ const addUser = (userData) =>{
     }
 }
 
-module.exports={addUser}
+const showUser = (userData) => {
+    console.log(chalk.green(`Name: ${userData.userName} - Account No.: ${userData.accountNo} - Initial Balance: ${userData.iniBalance} - Remaining Balance: ${userData.remBalance}`))
+}
+
+module.exports={addUser, showUser}
