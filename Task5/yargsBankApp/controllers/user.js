@@ -23,7 +23,7 @@ const addUser = (userData) =>{
 }
 
 const makeOp = (accNo, opType, money) => {
-    //glopally declare users arrar & user object ~ for usage in interall functions
+    //glopally declared users arrar & user object ~ for usage in interall functions below
     users = dealWithJson.readData()
     user = users.find(u => u.accountNo == accNo)
     //console.log(user)
@@ -44,12 +44,20 @@ const makeOp = (accNo, opType, money) => {
     else console.log(chalk.red('please enter a valid operation [withdraw/deposit]'))
 }
 
-const mngUser = (accNum, action) => {
-    let users = dealWithJson.readData()
-    let user = users.find(u => u.accountNo == accNum)
+const mngUser = (accNum, action,name) => {
+    users = dealWithJson.readData()
+    user = users.find(u => u.accountNo == accNum)
     if (user === undefined || user == null) return console.log(chalk.bgRed('invalid Account No.'))
-    if (action == 'showDetails') showUser(user)
-    else {console.log(chalk.red('please enter a valid action [showDetails/edit/delete]'))}
+    if (action == 'details') {
+        showUser(user)
+    }
+    else if (action=='edit') {
+        editUser(name)
+    }
+    else if (action == 'del') {
+        delUser(accNum)
+        }
+    else {console.log(chalk.red('please enter a valid action [details/edit/del]'))}
 }
 
 //functions used internally in this file only
@@ -65,8 +73,28 @@ const saveOp = (opType, money) => {
 }
 const showUser = (userX) => {
     console.log(chalk.green(`Name: ${userX.userName} - Account No.: ${userX.accountNo} - Initial Balance: ${userX.initBalance} - Remaining Balance: ${userX.remBalance}`))
-    if(userX.operations.length !== 0) console.log(`Operations done: ${userX.operations}`)
+    if (userX.operations.length !== 0) {
+        console.log(chalk.bold("Operations done: "))
+        userX.operations.forEach(element => {
+            if (element.type == "withdraw") {
+                console.log(chalk.bgGray(`Operation Type: ${element.type}  Value: ${element.value}  Date: ${element.opDate}`))
+            }
+            else console.log(`Operation Type: ${element.type}  Value: ${element.value}  Date: ${element.opDate}`)
+        });
+
+    }
+}
+const editUser = (name) => {
+    if (user.userName == name) return console.log('you provided the same user name')
+    user.userName = name
+    dealWithJson.writeData(users)
+    console.log(chalk.bgGreen.bold('User Name edited successfully'))
 }
 
+const delUser = (accNo) => {
+    users = users.filter(u => u.accountNo !== accNo)
+    dealWithJson.writeData(users)
+    console.log(chalk.bgGreen.bold('User deleted successfully'))
+}
 
 module.exports={addUser, makeOp, mngUser}

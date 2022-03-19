@@ -52,7 +52,7 @@ yargs.command({
 })
 yargs.command({
     command: 'mng user',
-    describe: 'used to manage user data',
+    describe: 'used to manage user account data',
     builder: {
         accNum: {
             type: Number,
@@ -61,13 +61,16 @@ yargs.command({
         action: {
             type: String,
             required:true
+        },
+        newName: {
+            type: String,
+            required: true
         }
     },
     handler: function (argv) {
-        console.log(typeof(argv.action))
-        console.log(typeof (argv.accNum))
-        user.mngUser(argv.accNum, argv.action)
+        user.mngUser(argv.accNum, argv.action, argv.newName)
     }
 })
+
 
 yargs.argv
