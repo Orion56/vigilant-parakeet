@@ -48,8 +48,8 @@ const mngUser = (accNum, action) => {
     let users = dealWithJson.readData()
     let user = users.find(u => u.accountNo == accNum)
     if (user === undefined || user == null) return console.log(chalk.bgRed('invalid Account No.'))
-    if (action === 'show operations') showUser(user)
-    else {console.log(chalk.red('please enter a valid action [show operations/edit/delete]'))}
+    if (action == 'showDetails') showUser(user)
+    else {console.log(chalk.red('please enter a valid action [showDetails/edit/delete]'))}
 }
 
 //functions used internally in this file only

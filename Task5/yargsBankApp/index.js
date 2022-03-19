@@ -61,7 +61,7 @@ yargs.command({
         action: {
             type: String,
             required:true
-        },
+        }
     },
     handler: function (argv) {
         console.log(typeof(argv.action))
