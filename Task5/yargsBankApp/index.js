@@ -1,7 +1,8 @@
 const user = require('./controllers/user')
 const yargs = require('yargs')
+//const { number, string } = require('yargs')
 
-let initial_balance
+
 yargs.command({
     command: 'add user',
     describe: 'used for adding user',
@@ -10,24 +11,63 @@ yargs.command({
             type: String,
             required:true
         },
-        initial_balance: {
+        initBalance: {
             type: Number,
             default:0
         }
     },
     handler: function (argv) {
-        let userData = {
+        let newUser = {
             userName: argv.name,
-            accountNo: Math.floor(Math.random()*10e16),
-            iniBalance: argv.initial_balance,
-            remBalance: argv.initial_balance,
+            accountNo: (Math.random() * 10e17),
+            initBalance: argv.initBalance,
+            remBalance: argv.initBalance,
             operations: []
         }
-        user.addUser(userData)
-        user.showUser(userData)
-        //console.log(userData)
+        //console.log(user)
+        user.addUser(newUser)
     }
 })
 
+yargs.command({
+    command: 'make op',
+    describe: 'used for making operations',
+    builder: {
+        accNum: {
+            type: Number,
+            required:true
+        },
+        type: {
+            type: String,
+            required:true
+        },
+        amount: {
+            type: Number,
+            required:true
+        }
+    },
+    handler: function (argv) {
+        user.makeOp(argv.accNum,argv.type,argv.amount)
+    }
+})
+yargs.command({
+    command: 'mng user',
+    describe: 'used to manage user data',
+    builder: {
+        accNum: {
+            type: Number,
+            required:true
+        },
+        action: {
+            type: String,
+            required:true
+        },
+    },
+    handler: function (argv) {
+        console.log(typeof(argv.action))
+        console.log(typeof (argv.accNum))
+        user.mngUser(argv.accNum, argv.action)
+    }
+})
 
 yargs.argv
