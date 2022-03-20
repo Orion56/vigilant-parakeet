@@ -1,10 +1,10 @@
 const validator = require('validator');
 const chalk = require('chalk')
 const dealWithJson = require('./dealWithJson')
-const findUserIndex = (users,key,val) => {
+/* const findUserIndex = (users,key,val) => {
     let i = users.findIndex(user => user[key] == val)
     return i
-}
+} */
 
 const addUser = (userData) =>{
     try{
@@ -90,7 +90,6 @@ const editUser = (name) => {
     dealWithJson.writeData(users)
     console.log(chalk.bgGreen.bold('User Name edited successfully'))
 }
-
 const delUser = (accNo) => {
     users = users.filter(u => u.accountNo !== accNo)
     dealWithJson.writeData(users)
