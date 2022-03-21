@@ -40,7 +40,8 @@ function elCreator (parent, elementType, txt, classes,attributes=[]) {
 }
 
 
-// Sample for the News Object 
+// Sample of the News Object 
+
 //{
 //     "source": {
 //         "id": null,
