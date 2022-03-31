@@ -1,0 +1,20 @@
+{
+  "name": "final-project---automotive-shop",
+  "version": "1.0.0",
+  "description": "Automotive Shopping Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "author": "Omar Tareq",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.8",
+    "multer": "^1.4.4",
+    "validator": "^13.7.0"
+  }
+}
