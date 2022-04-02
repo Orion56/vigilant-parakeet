@@ -10,8 +10,8 @@ const auth = async (req, res, next) => {
             admin:true
         })
         if (!user) throw new Error("invalid credintials")
-        user = req.user
-        token = req.token
+        req.user = user
+        req.token = token
         next()
     } catch (error) {
         res.status(500).send({

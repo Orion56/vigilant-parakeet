@@ -1,13 +1,18 @@
 const carModel = require('../db/models/car.model')
 class Car {
     static add = async (req, res) => {
+        const{vehicle,qty}=req.body
         try {
-            const car = new carModel(req.body)
-            await car.save()
+            let cars = [];
+            for (var i = 0; i < qty; i++) {
+                const car = new carModel(vehicle)
+                cars.push(car)
+                await car.save()
+            }
             res.status(200).send({
                 apiStatus: true,
-                data: car,
-                message:'New car added'
+                data: cars,
+                message:`${qty} cars added`
             })
         } catch (error) {
             res.status(500).send({

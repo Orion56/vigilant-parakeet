@@ -164,6 +164,24 @@ class User{
             })  
         }
     }
+    static loginAdmin = async (req, res) => {
+        try {
+            const user = await userModel.loginUser(req.body.email, req.body.password)
+            if(!user.admin) throw new Error('Invalid credentials')
+            const token = await user.generateToken()
+            res.status(200).send({
+                apiStatus: true,
+                data: { user, token },
+                message:"logged in"
+            })
+        } catch (error) {
+            res.status(500).send({
+                apiStatus: false,
+                errors: error.message,
+                message: "error logging in"
+            })  
+        }
+    }
     static logOut = async (req, res) => {
         try {
             req.user.tokens = req.user.tokens.filter(t => t.token != req.token)
@@ -185,9 +203,17 @@ class User{
         try {
             const user = req.user
             const car = await carModel.findById(req.params.carId)
+            if (!car) throw new Error('invalid car id')
+            if(car.status===false) throw new Error('car is not available')
             const cars = user.bookedCars
+            /* const prevBkd = cars.find(element => {
+                return element.toString() === car._id.toString()
+            })
+            if(prevBkd !== undefined) throw new Error('Car already booked') */
             cars.push(car)
             await user.save()
+            car.status = false
+            await car.save()
             res.status(200).send({
                 apiStatus: true,
                 data: car,
@@ -221,11 +247,13 @@ class User{
     static delCar = async (req, res) => {
         try {
             const user = req.user
-            const cars = user.bookedCars.find(this.value==req.params.carId )
+            let userCars = user.bookedCars.length;
+            user.bookedCars = user.bookedCars.filter(ele => ele.toString() !== req.params.carId.toString())
+            if(userCars===user.bookedCars.length) throw new Error('invalid car id')
             await user.save()
             res.status(200).send({
                 apiStatus: true,
-                data: cars,
+                data: "car",
                 message: 'car deleted'
             })
         } catch (error) {

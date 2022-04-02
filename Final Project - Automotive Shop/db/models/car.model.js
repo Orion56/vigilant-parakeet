@@ -27,10 +27,6 @@ let carSchema = new Schema({
         type: Number,
         required: true
     },
-    qty: {
-        type: Number,
-        required: true
-    },
     description: {
         type: String,
         trim: true
