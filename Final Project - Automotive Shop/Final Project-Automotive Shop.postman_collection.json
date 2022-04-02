@@ -1,0 +1,2759 @@
+{
+	"info": {
+		"_postman_id": "112b89ee-c778-4fee-b02c-0160780c1e3c",
+		"name": "Final Project-Automotive Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Register new customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"same7\",\r\n    \"email\": \"same7@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1st customer ever!",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"cust1\",\r\n    \"email\": \"cust1@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/add",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-niNIFIMthpdgk07N9NFW96QqMyQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:14:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"admin\": false,\n        \"name\": \"cust1\",\n        \"email\": \"cust1@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 21,\n        \"status\": false,\n        \"_id\": \"6241522fcb1587a3e94c90f3\",\n        \"tokens\": [],\n        \"createdAt\": \"2022-03-28T06:14:07.309Z\",\n        \"updatedAt\": \"2022-03-28T06:14:07.309Z\"\n    },\n    \"message\": \"user added\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"same7@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}user/login",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"cust1@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}user/login",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1626"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65a-96tmlk7Up7OPVSDc/FGYSmpjzks\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 04:41:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"624527fc82c0b7dbb571474c\",\n            \"admin\": false,\n            \"name\": \"cust1\",\n            \"email\": \"cust1@mail.com\",\n            \"phone\": \"01000123456\",\n            \"age\": 22,\n            \"bookedCars\": [],\n            \"status\": false,\n            \"tokens\": [\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDEzMTh9.ftC5j00ISOFHLeQFwb1Pl7ZoneYRk4dnKx5BIEKJhBU\",\n                    \"_id\": \"62452f86da20e56a6cec1c9c\"\n                },\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ\",\n                    \"_id\": \"624530746babde6a54742288\"\n                },\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTd9.RyaYnY0o_i4fq4fOUNocxeBmlKhM9pWO3MIdHwxTNVs\",\n                    \"_id\": \"624530b1fd7705ce27a98b3f\"\n                },\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTh9.LWrKNRDs-QZ7qk69rx4wsZ45v-RzI1bQpzWv_kyJ87M\",\n                    \"_id\": \"624530b2fd7705ce27a98b42\"\n                },\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MjB9.RLPTIRmNbptFG2cDT6zGk0m1IBk4BXTlHQ94W2HL9ag\",\n                    \"_id\": \"624530b4fd7705ce27a98b45\"\n                },\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0\",\n                    \"_id\": \"624530f3415e74fd58b740f7\"\n                }\n            ],\n            \"createdAt\": \"2022-03-31T04:03:08.129Z\",\n            \"updatedAt\": \"2022-03-31T04:41:23.606Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0\"\n    },\n    \"message\": \"logged in\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{custToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/profile/624700e8ed5db28b30d678bf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile",
+								"624700e8ed5db28b30d678bf"
+							]
+						},
+						"description": "<h1>Show single car data</h1>"
+					},
+					"response": [
+						{
+							"name": "profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/profile/624527fc82c0b7dbb571474c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile",
+										"624527fc82c0b7dbb571474c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1469"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5bd-BWWlxp3rC7lvfahLDRciXiOs3Mc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 04:46:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"624527fc82c0b7dbb571474c\",\n        \"admin\": false,\n        \"name\": \"cust1\",\n        \"email\": \"cust1@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 22,\n        \"bookedCars\": [],\n        \"status\": false,\n        \"tokens\": [\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDEzMTh9.ftC5j00ISOFHLeQFwb1Pl7ZoneYRk4dnKx5BIEKJhBU\",\n                \"_id\": \"62452f86da20e56a6cec1c9c\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ\",\n                \"_id\": \"624530746babde6a54742288\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTd9.RyaYnY0o_i4fq4fOUNocxeBmlKhM9pWO3MIdHwxTNVs\",\n                \"_id\": \"624530b1fd7705ce27a98b3f\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTh9.LWrKNRDs-QZ7qk69rx4wsZ45v-RzI1bQpzWv_kyJ87M\",\n                \"_id\": \"624530b2fd7705ce27a98b42\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MjB9.RLPTIRmNbptFG2cDT6zGk0m1IBk4BXTlHQ94W2HL9ag\",\n                \"_id\": \"624530b4fd7705ce27a98b45\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0\",\n                \"_id\": \"624530f3415e74fd58b740f7\"\n            }\n        ],\n        \"createdAt\": \"2022-03-31T04:03:08.129Z\",\n        \"updatedAt\": \"2022-03-31T04:41:23.606Z\"\n    },\n    \"message\": \"user details is shown\"\n}"
+						},
+						{
+							"name": "invalid user id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/profile/6241522fcb1587a3e94c90f0",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile",
+										"6241522fcb1587a3e94c90f0"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-0AQ+E611PwG/kD1MgCRzeUorpo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:45:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid user id\",\n    \"message\": \"error showing user details\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hallo\",\r\n    \"age\": \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/editSngl/62415b0efb35e7c58f460736",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"editSngl",
+								"62415b0efb35e7c58f460736"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit single user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"edited cust\",\r\n    \"email\": \"cushh5@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/editSngl/62415b05fb35e7c58f460732",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"editSngl",
+										"62415b05fb35e7c58f460732"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "291"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"123-uEWM0CMrn5dAwj89jLUByTKv2uw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:53:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"62415b05fb35e7c58f460732\",\n        \"admin\": false,\n        \"name\": \"cust5\",\n        \"email\": \"cust555@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 22,\n        \"status\": false,\n        \"tokens\": [],\n        \"createdAt\": \"2022-03-28T06:51:49.720Z\",\n        \"updatedAt\": \"2022-03-28T06:51:49.720Z\"\n    },\n    \"message\": \"user data has been updated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Profile (main route)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQxNWIwYmZiMzVlN2M1OGY0NjA3MzQiLCJpYXQiOjE2NDg3MjAyNTh9.shOPZcqrT4J3Sh7YGl_l4rqz0dgtw7XvjvVdrA9-Qa4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \" xyz\",\r\n    \"email\": \"cushh456@mail.com\",\r\n    \"phone\": \"01225440554\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/edit",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit single user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"edited cust\",\r\n    \"email\": \"cushh5@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/editSngl/62415b05fb35e7c58f460732",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"editSngl",
+										"62415b05fb35e7c58f460732"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "291"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"123-uEWM0CMrn5dAwj89jLUByTKv2uw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:53:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"62415b05fb35e7c58f460732\",\n        \"admin\": false,\n        \"name\": \"cust5\",\n        \"email\": \"cust555@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 22,\n        \"status\": false,\n        \"tokens\": [],\n        \"createdAt\": \"2022-03-28T06:51:49.720Z\",\n        \"updatedAt\": \"2022-03-28T06:51:49.720Z\"\n    },\n    \"message\": \"user data has been updated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/delSngl/62415b05fb35e7c58f460732",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delSngl",
+								"62415b05fb35e7c58f460732"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del single user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-sWRfOr5QWhtZ7vl6XfKC4EBii48\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": \"6241522fcb1587a3e94c90f3\",\n    \"message\": \"user deleted\"\n}"
+						},
+						{
+							"name": "invalid user id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-6T9iqevZukybHLlQ8Sl7QhfAQJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:48:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid user id\",\n    \"message\": \"error deleting user\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Book a car",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{custToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}user/book/6246fdf7e6a14dcecc76d496",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"book",
+								"6246fdf7e6a14dcecc76d496"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Book a car",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}user/book/624112bd184799f91e036ca7",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"book",
+										"624112bd184799f91e036ca7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "438"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b6-eXWHT7G5o5S/wi8SpAdzS/hVwZk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 07:02:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"624112bd184799f91e036ca7\",\n        \"condition\": \"New\",\n        \"maker\": \"Audi\",\n        \"model\": \"Q5\",\n        \"bodyStyle\": \"Sedan\",\n        \"price\": 4000,\n        \"qty\": 8,\n        \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n        \"status\": true,\n        \"createdAt\": \"2022-03-28T01:43:25.340Z\",\n        \"updatedAt\": \"2022-03-28T01:43:25.340Z\",\n        \"__v\": 0\n    },\n    \"message\": \"car booked\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show user booked cars",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}user/myCars/624527fc82c0b7dbb571474c",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"myCars",
+								"624527fc82c0b7dbb571474c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show user cars",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}user/myCars/624527fc82c0b7dbb571474c",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"myCars",
+										"624527fc82c0b7dbb571474c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-ZsQqdWjh5KMOcZ9u9o6Da/EKgsw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 07:03:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": [\n        \"624112bd184799f91e036ca7\",\n        \"624112bd184799f91e036ca7\",\n        \"624112bd184799f91e036ca7\",\n        \"624112bd184799f91e036ca7\"\n    ],\n    \"message\": \"All user cars are shown\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del car",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{custToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/delCar/6246fdf9e6a14dcecc76d498",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delCar",
+								"6246fdf9e6a14dcecc76d498"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del single user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-sWRfOr5QWhtZ7vl6XfKC4EBii48\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": \"6241522fcb1587a3e94c90f3\",\n    \"message\": \"user deleted\"\n}"
+						},
+						{
+							"name": "invalid user id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-6T9iqevZukybHLlQ8Sl7QhfAQJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:48:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid user id\",\n    \"message\": \"error deleting user\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Customer Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}user/logout",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}user/logout",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-a0POrh71S9D8fhnot61aZ3gYml8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 05:31:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": \"\",\n    \"message\": \"logged out\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "add new car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"vehicle\":{\r\n    \"condition\": \"New\",\r\n    \"maker\": \"BMW\",\r\n    \"model\": \"X5\",\r\n    \"bodyStyle\": \"sedan\",\r\n    \"price\": 4000,\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\"\r\n},\r\n\"qty\":5}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Benz",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"maker\": \"Benz\",\r\n    \"model\": \"W115\",\r\n    \"bodyStyle\": \"Sedan\",\r\n    \"price\": 3000,\r\n    \"qty\": 2,\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/add",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bc-T3VfXIa1VlF9P4rwgHpyjjEfIiQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:20:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"condition\": \"Used\",\n        \"maker\": \"Benz\",\n        \"model\": \"W115\",\n        \"bodyStyle\": \"Sedan\",\n        \"price\": 3000,\n        \"qty\": 2,\n        \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n        \"status\": true,\n        \"_id\": \"624080d878b0344c9defb905\",\n        \"createdAt\": \"2022-03-27T15:20:56.904Z\",\n        \"updatedAt\": \"2022-03-27T15:20:56.904Z\",\n        \"__v\": 0\n    },\n    \"message\": \"New car added\"\n}"
+						},
+						{
+							"name": "BMW",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"condition\": \"New\",\r\n    \"maker\": \"BMW\",\r\n    \"model\": \"X3\",\r\n    \"bodyStyle\":\"SUV\",\r\n    \"price\": 3000,\r\n    \"qty\": 2,\r\n    \"description\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/add",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "438"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b6-n1nqxwKskm60wXvo+s9i9w8bAos\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 06:54:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"condition\": \"New\",\n        \"maker\": \"BMW\",\n        \"model\": \"X3\",\n        \"bodyStyle\": \"SUV\",\n        \"price\": 3000,\n        \"qty\": 2,\n        \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n        \"status\": true,\n        \"_id\": \"62400a30fec4af164e19e647\",\n        \"createdAt\": \"2022-03-27T06:54:40.233Z\",\n        \"updatedAt\": \"2022-03-27T06:54:40.233Z\",\n        \"__v\": 0\n    },\n    \"message\": \"New car added\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show all Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/car/showAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"showAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show all Cars",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/car/showAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"showAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"966-Q7sjk+dOt8RLRoPnwmYaLRYfhyM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 15:40:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": [\n        {\n            \"total_No\": 6\n        },\n        [\n            {\n                \"_id\": \"624085645eaef6f1072866d1\",\n                \"condition\": \"Used\",\n                \"maker\": \"Benz\",\n                \"model\": \"C200\",\n                \"bodyStyle\": \"Sedan\",\n                \"price\": 3000,\n                \"qty\": 5,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T15:40:20.711Z\",\n                \"updatedAt\": \"2022-03-27T15:40:20.711Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"624080d878b0344c9defb905\",\n                \"condition\": \"Used\",\n                \"maker\": \"Benz\",\n                \"model\": \"W115\",\n                \"bodyStyle\": \"Sedan\",\n                \"price\": 3000,\n                \"qty\": 2,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T15:20:56.904Z\",\n                \"updatedAt\": \"2022-03-27T15:20:56.904Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"624080ad78b0344c9defb903\",\n                \"condition\": \"Used\",\n                \"maker\": \"BMW\",\n                \"model\": \"X3\",\n                \"bodyStyle\": \"SUV\",\n                \"price\": 3000,\n                \"qty\": 2,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T15:20:13.457Z\",\n                \"updatedAt\": \"2022-03-27T15:20:13.457Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"62400df85a9588969bed5a13\",\n                \"condition\": \"New\",\n                \"maker\": \"BMW\",\n                \"model\": \"X3\",\n                \"bodyStyle\": \"SUV\",\n                \"price\": 3000,\n                \"qty\": 2,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T07:10:48.979Z\",\n                \"updatedAt\": \"2022-03-27T07:10:48.979Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"62400df85a9588969bed5a11\",\n                \"condition\": \"New\",\n                \"maker\": \"BMW\",\n                \"model\": \"X3\",\n                \"bodyStyle\": \"SUV\",\n                \"price\": 3000,\n                \"qty\": 2,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T07:10:48.348Z\",\n                \"updatedAt\": \"2022-03-27T07:10:48.348Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"62400df75a9588969bed5a0f\",\n                \"condition\": \"New\",\n                \"maker\": \"BMW\",\n                \"model\": \"X3\",\n                \"bodyStyle\": \"SUV\",\n                \"price\": 3000,\n                \"qty\": 2,\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n                \"status\": true,\n                \"createdAt\": \"2022-03-27T07:10:47.654Z\",\n                \"updatedAt\": \"2022-03-27T07:10:47.654Z\",\n                \"__v\": 0\n            }\n        ]\n    ],\n    \"message\": \"all Cars shown\"\n}"
+						},
+						{
+							"name": "db is empty of cars",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/car/showAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"showAll"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5d-t+g3UV6KubsWZFaYRuXGyQcmc2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:36:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"there are no cars in the db\",\n    \"message\": \"error showing all cars\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show single car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/car/showSngl/62410d18ee2be19c8cbfd693",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"showSngl",
+								"62410d18ee2be19c8cbfd693"
+							]
+						},
+						"description": "<h1>Show single car data</h1>"
+					},
+					"response": [
+						{
+							"name": "Show single car data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/car/showSngl/62410d18ee2be19c8cbfd693",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"showSngl",
+										"62410d18ee2be19c8cbfd693"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "448"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c0-JtgIILzPWtwCE7KDU79mFeG8gXg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:24:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"62410d18ee2be19c8cbfd693\",\n        \"condition\": \"New\",\n        \"maker\": \"Audi\",\n        \"model\": \"Q5\",\n        \"bodyStyle\": \"Sedan\",\n        \"price\": 4000,\n        \"qty\": 8,\n        \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n        \"status\": true,\n        \"createdAt\": \"2022-03-28T01:19:20.375Z\",\n        \"updatedAt\": \"2022-03-28T01:19:20.375Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Car details is shown\"\n}"
+						},
+						{
+							"name": "invalid car id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/car/showSngl/62410d18ee2be19c8cbfd690",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"showSngl",
+										"62410d18ee2be19c8cbfd690"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"53-Z0LxMtK9Pi5dukZkguVq/giWToc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:42:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid car id\",\n    \"message\": \"error showing Car details\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del single car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/delSngl/62400df85a9588969bed5a11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"delSngl",
+								"62400df85a9588969bed5a11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del single car",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/delSngl/624006137f32ac8940e1c13c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"delSngl",
+										"624006137f32ac8940e1c13c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "442"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ba-jl6Q7mC8ZU9eqJ4DwEZbDrYt00s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 06:53:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"624006137f32ac8940e1c13c\",\n        \"condition\": \"New\",\n        \"maker\": \"benz\",\n        \"model\": \"W110\",\n        \"bodyStyle\": \"sedan\",\n        \"price\": 1000,\n        \"qty\": 11,\n        \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n        \"status\": true,\n        \"createdAt\": \"2022-03-27T06:37:07.926Z\",\n        \"updatedAt\": \"2022-03-27T06:37:07.926Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Car deleted\"\n}"
+						},
+						{
+							"name": "invalid car id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/delSngl/62400df85a9588969bed5a11",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"delSngl",
+										"62400df85a9588969bed5a11"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-KgYF1Z9UgBhYASTO/BymQh1VvJU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:40:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid car id\",\n    \"message\": \"error deleting Car\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del all cars",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/car/delAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"delAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del all cars",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/car/delAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"delAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-d7Anw9YzB7Q7aRbWKnM6J4jWKH0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:27:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"acknowledged\": true,\n        \"deletedCount\": 11\n    },\n    \"message\": \"All Cars deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit single car",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"maker\": \"Benz\",\r\n    \"model\": \"C200\",\r\n    \"bodyStyle\": \"Sedan\",\r\n    \"price\": 4500,\r\n    \"qty\": 5,\r\n    \"description\": \"edited descdescription\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/editSngl/624085645eaef6f1072866d1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"editSngl",
+								"624085645eaef6f1072866d1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "C200 edit price",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"maker\": \"Benz\",\r\n    \"model\": \"C200\",\r\n    \"bodyStyle\": \"Sedan\",\r\n    \"price\": 454000,\r\n    \"qty\": 5,\r\n    \"description\": \"edited descdescription\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/editSngl/624085645eaef6f1072866d1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"editSngl",
+										"624085645eaef6f1072866d1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "329"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"149-zt7RKCb0N9Icbz3Zx7gVXzDxn6U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Mar 2022 23:53:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"624085645eaef6f1072866d1\",\n        \"condition\": \"Used\",\n        \"maker\": \"Benz\",\n        \"model\": \"C200\",\n        \"bodyStyle\": \"Sedan\",\n        \"price\": 454000,\n        \"qty\": 5,\n        \"description\": \"edited descdescription\",\n        \"status\": true,\n        \"createdAt\": \"2022-03-27T15:40:20.711Z\",\n        \"updatedAt\": \"2022-03-27T16:20:24.674Z\",\n        \"__v\": 0\n    },\n    \"message\": \"Car data has been updated\"\n}"
+						},
+						{
+							"name": "invalid car id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"maker\": \"Benz\",\r\n    \"model\": \"C200\",\r\n    \"bodyStyle\": \"Sedan\",\r\n    \"price\": 4500,\r\n    \"qty\": 5,\r\n    \"description\": \"edited descdescription\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/editSngl/624085645eaef6f1072866d2",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"editSngl",
+										"624085645eaef6f1072866d2"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-CdIR0rGJzK2LHDQgH5r7cx0zwfM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:37:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid car id\",\n    \"message\": \"error updating Car data\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit All Cars",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"price\":\"10\",\r\n    \"qty\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/editAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"editAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Batch edit",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"condition\": \"Used\",\r\n    \"price\":\"10\",\r\n    \"qty\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/car/editAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"car",
+										"editAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1881"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"759-FwwkB402KyggCfHS1H7ThEqv8FM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 01:15:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": [\n        {\n            \"_id\": \"62400df75a9588969bed5a0f\",\n            \"condition\": \"Used\",\n            \"maker\": \"BMW\",\n            \"model\": \"X3\",\n            \"bodyStyle\": \"SUV\",\n            \"price\": 10,\n            \"qty\": 1,\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n            \"status\": true,\n            \"createdAt\": \"2022-03-27T07:10:47.654Z\",\n            \"updatedAt\": \"2022-03-28T00:59:26.780Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62400df85a9588969bed5a13\",\n            \"condition\": \"Used\",\n            \"maker\": \"BMW\",\n            \"model\": \"X3\",\n            \"bodyStyle\": \"SUV\",\n            \"price\": 10,\n            \"qty\": 1,\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n            \"status\": true,\n            \"createdAt\": \"2022-03-27T07:10:48.979Z\",\n            \"updatedAt\": \"2022-03-28T00:59:26.781Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"624080ad78b0344c9defb903\",\n            \"condition\": \"Used\",\n            \"maker\": \"BMW\",\n            \"model\": \"X3\",\n            \"bodyStyle\": \"SUV\",\n            \"price\": 10,\n            \"qty\": 1,\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n            \"status\": true,\n            \"createdAt\": \"2022-03-27T15:20:13.457Z\",\n            \"updatedAt\": \"2022-03-28T00:59:26.782Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"624080d878b0344c9defb905\",\n            \"condition\": \"Used\",\n            \"maker\": \"Benz\",\n            \"model\": \"W115\",\n            \"bodyStyle\": \"Sedan\",\n            \"price\": 10,\n            \"qty\": 1,\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s\",\n            \"status\": true,\n            \"createdAt\": \"2022-03-27T15:20:56.904Z\",\n            \"updatedAt\": \"2022-03-28T00:59:26.782Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"624085645eaef6f1072866d1\",\n            \"condition\": \"Used\",\n            \"maker\": \"Benz\",\n            \"model\": \"C200\",\n            \"bodyStyle\": \"Sedan\",\n            \"price\": 10,\n            \"qty\": 1,\n            \"description\": \"edited descdescription\",\n            \"status\": true,\n            \"createdAt\": \"2022-03-27T15:40:20.711Z\",\n            \"updatedAt\": \"2022-03-28T00:59:26.782Z\",\n            \"__v\": 0\n        }\n    ],\n    \"message\": \"ALL Cars data has been updated\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admins",
+			"item": [
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\": \"admin2@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\",\r\n    \"admin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}user/login",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1st admin login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\": \"admin@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\",\r\n    \"admin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}user/login",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "651"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28b-XRm9rf8deEfjVLbWTLDWD3PQc6E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 05:11:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"624537400077b14171973f01\",\n            \"admin\": true,\n            \"name\": \"admin1\",\n            \"email\": \"admin@mail.com\",\n            \"phone\": \"01000123456\",\n            \"age\": 22,\n            \"bookedCars\": [],\n            \"status\": false,\n            \"tokens\": [\n                {\n                    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU\",\n                    \"_id\": \"624538108e905be19a008ba1\"\n                }\n            ],\n            \"createdAt\": \"2022-03-31T05:08:16.498Z\",\n            \"updatedAt\": \"2022-03-31T05:11:44.543Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU\"\n    },\n    \"message\": \"logged in\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add new Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"email\": \"admin@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\",\r\n    \"admin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"admin2\",\r\n    \"email\": \"admin2@mail.com\",\r\n    \"phone\": \"01000123456\",\r\n    \"password\": \"12345678\",\r\n    \"age\": \"22\",\r\n    \"admin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/add",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-RQsIrG0VtxKiBGhdnlhjKgrHA8o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 05:12:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"admin\": true,\n        \"name\": \"admin2\",\n        \"email\": \"admin2@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 22,\n        \"bookedCars\": [],\n        \"status\": false,\n        \"_id\": \"6245383a8e905be19a008ba7\",\n        \"tokens\": [],\n        \"createdAt\": \"2022-03-31T05:12:26.710Z\",\n        \"updatedAt\": \"2022-03-31T05:12:26.710Z\"\n    },\n    \"message\": \"user added\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2ZmM1ZTliMGZhMDY3ZGJhNWI1MWEiLCJpYXQiOjE2NDg4MTkzNzl9.HlzNwb72TMvVZEunRVETcQgNNmgnjQcXZsh9R9fYwk0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/showAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"showAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show all Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/user/showAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"showAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4070"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe6-6EHGJvnRe7bucDNziVijofpgPkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 05:14:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": [\n        {\n            \"Total_no\": 10\n        },\n        [\n            {\n                \"_id\": \"6245383a8e905be19a008ba7\",\n                \"admin\": true,\n                \"name\": \"admin2\",\n                \"email\": \"admin2@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"bookedCars\": [],\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-31T05:12:26.710Z\",\n                \"updatedAt\": \"2022-03-31T05:12:26.710Z\"\n            },\n            {\n                \"_id\": \"624537400077b14171973f01\",\n                \"admin\": true,\n                \"name\": \"admin1\",\n                \"email\": \"admin@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"bookedCars\": [],\n                \"status\": false,\n                \"tokens\": [\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU\",\n                        \"_id\": \"624538108e905be19a008ba1\"\n                    }\n                ],\n                \"createdAt\": \"2022-03-31T05:08:16.498Z\",\n                \"updatedAt\": \"2022-03-31T05:11:44.543Z\"\n            },\n            {\n                \"_id\": \"624534f0e00792ec697ab76e\",\n                \"admin\": false,\n                \"name\": \"cust0\",\n                \"email\": \"cust0@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"bookedCars\": [],\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-31T04:58:24.595Z\",\n                \"updatedAt\": \"2022-03-31T04:58:24.595Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"62415b0efb35e7c58f460736\",\n                \"admin\": false,\n                \"name\": \"edited cust\",\n                \"email\": \"cushh5@mail.com\",\n                \"phone\": \"01225440554\",\n                \"age\": 40,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-28T06:51:58.210Z\",\n                \"updatedAt\": \"2022-03-31T04:55:25.095Z\"\n            },\n            {\n                \"_id\": \"624527fc82c0b7dbb571474c\",\n                \"admin\": false,\n                \"name\": \"cust1\",\n                \"email\": \"cust1@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"bookedCars\": [],\n                \"status\": false,\n                \"tokens\": [\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDEzMTh9.ftC5j00ISOFHLeQFwb1Pl7ZoneYRk4dnKx5BIEKJhBU\",\n                        \"_id\": \"62452f86da20e56a6cec1c9c\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ\",\n                        \"_id\": \"624530746babde6a54742288\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTd9.RyaYnY0o_i4fq4fOUNocxeBmlKhM9pWO3MIdHwxTNVs\",\n                        \"_id\": \"624530b1fd7705ce27a98b3f\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTh9.LWrKNRDs-QZ7qk69rx4wsZ45v-RzI1bQpzWv_kyJ87M\",\n                        \"_id\": \"624530b2fd7705ce27a98b42\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MjB9.RLPTIRmNbptFG2cDT6zGk0m1IBk4BXTlHQ94W2HL9ag\",\n                        \"_id\": \"624530b4fd7705ce27a98b45\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2ODN9.5SgTAu1n6y4yHtNd0b-MB93PkCl8sF57LV6ZPRpxkO0\",\n                        \"_id\": \"624530f3415e74fd58b740f7\"\n                    },\n                    {\n                        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDIxMTd9.QWF6UhXWyDQMhfF5aHjUPcr4gG2Y6s2DJxEJI1ComcM\",\n                        \"_id\": \"624532a50215f74c01e4aa13\"\n                    }\n                ],\n                \"createdAt\": \"2022-03-31T04:03:08.129Z\",\n                \"updatedAt\": \"2022-03-31T04:48:37.457Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"6243f869c2d00bbfa419ce25\",\n                \"admin\": false,\n                \"name\": \"cust51\",\n                \"email\": \"cust1510@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-30T06:27:53.990Z\",\n                \"updatedAt\": \"2022-03-30T06:27:53.990Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"6243f861c2d00bbfa419ce21\",\n                \"admin\": false,\n                \"name\": \"cust111\",\n                \"email\": \"cust11110@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-30T06:27:45.486Z\",\n                \"updatedAt\": \"2022-03-30T06:27:45.486Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"6243f85cc2d00bbfa419ce1f\",\n                \"admin\": false,\n                \"name\": \"cust11\",\n                \"email\": \"cust110@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-30T06:27:40.984Z\",\n                \"updatedAt\": \"2022-03-30T06:27:40.984Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"6243f850c2d00bbfa419ce1b\",\n                \"admin\": false,\n                \"name\": \"cust1\",\n                \"email\": \"cust10@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-30T06:27:28.634Z\",\n                \"updatedAt\": \"2022-03-30T06:27:28.634Z\"\n            },\n            {\n                \"bookedCars\": [],\n                \"_id\": \"62415b0bfb35e7c58f460734\",\n                \"admin\": false,\n                \"name\": \"cust5\",\n                \"email\": \"cust55h5@mail.com\",\n                \"phone\": \"01000123456\",\n                \"age\": 22,\n                \"status\": false,\n                \"tokens\": [],\n                \"createdAt\": \"2022-03-28T06:51:55.369Z\",\n                \"updatedAt\": \"2022-03-28T06:51:55.369Z\"\n            }\n        ]\n    ],\n    \"message\": \"All users are shown\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del all users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/delAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del all users",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/delAll",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-x2cqTfrIkmuimuCdPx8NzNxw6Us\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:50:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"acknowledged\": true,\n        \"deletedCount\": 6\n    },\n    \"message\": \"All users deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "del single user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/delSngl/62415b05fb35e7c58f460732",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delSngl",
+								"62415b05fb35e7c58f460732"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "del single user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-sWRfOr5QWhtZ7vl6XfKC4EBii48\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": \"6241522fcb1587a3e94c90f3\",\n    \"message\": \"user deleted\"\n}"
+						},
+						{
+							"name": "invalid user id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/delSngl/6241522fcb1587a3e94c90f5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"delSngl",
+										"6241522fcb1587a3e94c90f5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-6T9iqevZukybHLlQ8Sl7QhfAQJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Mar 2022 06:48:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid user id\",\n    \"message\": \"error deleting user\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}user/logout",
+							"host": [
+								"{{server}}user"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logged out",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1Mzc0MDAwNzdiMTQxNzE5NzNmMDEiLCJpYXQiOjE2NDg3MDM1MDR9.RBrcgmy8mW5Pp86mQFN5fNBbKtEZ-CS_2Pb_-r9nDaU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}user/logout",
+									"host": [
+										"{{server}}user"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-a0POrh71S9D8fhnot61aZ3gYml8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 05:29:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": \"\",\n    \"message\": \"logged out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show single user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDIxMTd9.QWF6UhXWyDQMhfF5aHjUPcr4gG2Y6s2DJxEJI1ComcM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/profile/624527fc82c0b7dbb571474c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile",
+								"624527fc82c0b7dbb571474c"
+							]
+						},
+						"description": "<h1>Show single car data</h1>"
+					},
+					"response": [
+						{
+							"name": "show single user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDIxMTd9.QWF6UhXWyDQMhfF5aHjUPcr4gG2Y6s2DJxEJI1ComcM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/user/showSngl/624527fc82c0b7dbb571474c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"showSngl",
+										"624527fc82c0b7dbb571474c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1549"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"60d-Ezn/pI9ZYnDgflklyAVYaTWcwSE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 07:00:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"624527fc82c0b7dbb571474c\",\n        \"admin\": false,\n        \"name\": \"cust1\",\n        \"email\": \"cust1@mail.com\",\n        \"phone\": \"01000123456\",\n        \"age\": 22,\n        \"bookedCars\": [\n            \"624112bd184799f91e036ca7\",\n            \"624112bd184799f91e036ca7\",\n            \"624112bd184799f91e036ca7\"\n        ],\n        \"status\": false,\n        \"tokens\": [\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE1NTZ9.-NHO5npNwb3yQ9reCeHkBcQkillabwby1SxsXdCy7MQ\",\n                \"_id\": \"624530746babde6a54742288\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTd9.RyaYnY0o_i4fq4fOUNocxeBmlKhM9pWO3MIdHwxTNVs\",\n                \"_id\": \"624530b1fd7705ce27a98b3f\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MTh9.LWrKNRDs-QZ7qk69rx4wsZ45v-RzI1bQpzWv_kyJ87M\",\n                \"_id\": \"624530b2fd7705ce27a98b42\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDE2MjB9.RLPTIRmNbptFG2cDT6zGk0m1IBk4BXTlHQ94W2HL9ag\",\n                \"_id\": \"624530b4fd7705ce27a98b45\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDIxMTd9.QWF6UhXWyDQMhfF5aHjUPcr4gG2Y6s2DJxEJI1ComcM\",\n                \"_id\": \"624532a50215f74c01e4aa13\"\n            },\n            {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDQ2MjV9.LQZEWbnDESbcuLMsxOS0_6i8njpov6ABWC3b2XHrvV4\",\n                \"_id\": \"62453c71c6521b0685829293\"\n            }\n        ],\n        \"createdAt\": \"2022-03-31T04:03:08.129Z\",\n        \"updatedAt\": \"2022-03-31T06:44:59.240Z\"\n    },\n    \"message\": \"user details is shown\"\n}"
+						},
+						{
+							"name": "invalid user id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ1MjdmYzgyYzBiN2RiYjU3MTQ3NGMiLCJpYXQiOjE2NDg3MDIxMTd9.QWF6UhXWyDQMhfF5aHjUPcr4gG2Y6s2DJxEJI1ComcM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/user/profile/624527fc82c0b7dbb5714745",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile",
+										"624527fc82c0b7dbb5714745"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-0AQ+E611PwG/kD1MgCRzeUorpo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 07:02:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"apiStatus\": false,\n    \"errors\": \"invalid user id\",\n    \"message\": \"error showing user details\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "adminToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ2ZmM1ZTliMGZhMDY3ZGJhNWI1MWEiLCJpYXQiOjE2NDg4MTkzNzl9.HlzNwb72TMvVZEunRVETcQgNNmgnjQcXZsh9R9fYwk0",
+			"type": "string"
+		},
+		{
+			"key": "custToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQ3MDBlOGVkNWRiMjhiMzBkNjc4YmYiLCJpYXQiOjE2NDg4MjA0ODV9.Lfss0PXQwQSHWhm7-tOIckqss9yBa0il1XCsmigkj90",
+			"type": "string"
+		}
+	]
+}
